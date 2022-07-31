@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @team %>
+
+<div>
+  <%= link_to "Edit this team", edit_team_path(@team) %> |
+  <%= link_to "Back to teams", teams_path %> |
+  <%= link_to "Add player to team", new_team_player_path(@team) %> 
+  <%= link_to "Players on team", team_players_path(@team) %> 
+
+  <%= button_to "Destroy this team", @team, method: :delete %>
+</div>
