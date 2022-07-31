@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get '/' => 'teams#index'
+
+
   resources :players, only: [:new, :create, :index]
+
   resources :teams do 
     resources :players, shallow: true #index, create, new
   end
